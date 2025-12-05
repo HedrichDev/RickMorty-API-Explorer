@@ -98,4 +98,15 @@ Este proyecto está bajo la Licencia MIT.
 
 ---
 
-**Copyright (c) 2025 HEDRICHDEV**
+<div align="center" style="transition: transform 0.2s; display: inline-block;">
+  <img height="250" src="https://cdn.discordapp.com/attachments/1416487311587147787/1446304736465915934/Copilot_20251113_134613.png?ex=69337fc0&is=69322e40&hm=28f9e323b3f6c5456ddca218a2026fee2e1ab5c9c63f27fb803f0ad6df4425bc" 
+       style="border-radius: 15px; transition: transform 0.2s;" 
+       onmouseover="this.style.transform='scale(1.1)'" 
+       onmouseout="this.style.transform='scale(1)'"/>
+
+</div>
+<div align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=glocf.glocf&"  />
+</div>
+
+<h4 align="center"> Copyright (c) 2025 HΞDЯICHDΞV </h4>
