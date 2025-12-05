@@ -1,10 +1,7 @@
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
-import { serveStatic } from "./static";
-import { createServer } from "http";
 
 const app = express();
-const httpServer = createServer(app);
 
 declare module "http" {
   interface IncomingMessage {
@@ -59,10 +56,10 @@ app.use((req, res, next) => {
   next();
 });
 
-// Register routes for both local and serverless environments
+// Register routes
 registerRoutes(app);
 
-// Add error handling for both environments
+// Add error handling
 app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
   const status = err.status || err.statusCode || 500;
   const message = err.message || "Internal Server Error";
@@ -71,28 +68,5 @@ app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
   throw err;
 });
 
-// Export the app for serverless environments
+// Export the app for serverless environments and local dev server
 export default app;
-
-// Start the server only if not in a serverless environment (e.g., local development)
-if (!process.env.NETLIFY) {
-  (async () => {
-    if (process.env.NODE_ENV === "production") {
-      serveStatic(app);
-    } else {
-      const { setupVite } = await import("./vite");
-      await setupVite(httpServer, app);
-    }
-
-    const port = parseInt(process.env.PORT || "5000", 10);
-    httpServer.listen(
-      {
-        port,
-        host: "0.0.0.0",
-      },
-      () => {
-        log(`serving on port ${port}`);
-      },
-    );
-  })();
-}
