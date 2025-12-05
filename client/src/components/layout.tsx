@@ -100,8 +100,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </main>
 
       <footer className="border-t border-border/40 py-8 text-center text-muted-foreground text-sm">
+        <a href="https://github.com/HedrichDev" target="_blank" rel="noopener noreferrer" className="block mt-4 mb-2">
+          <img src="/HedrichDev.png" alt="HedrichDev Logo" className="w-16 h-16 mx-auto" />
+        </a>
         <p>© {new Date().getFullYear()} Rick and Morty Explorer. HΞDЯICHDΞV </p>
-
       </footer>
     </div>
   );
