@@ -1,41 +1,65 @@
+<p align="center">
+  <img src="./client/public/LogoOriginal.png" alt="Rick and Morty API Explorer Logo" width="300"/>
+</p>
 
-# 『HZ』┊ Rick and Morty API
-![]()
+<h1 align="center">Rick and Morty API Explorer</h1>
 
-¡Bienvenido al Explorador del Universo de Rick and Morty! Esta aplicación web te permite navegar, buscar y descubrir todos los personajes de la famosa serie, utilizando la [API pública de Rick and Morty](https://rickandmortyapi.com/).
+<p align="center">
+  <a href="https://react.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
+  </a>
+  <a href="https://vitejs.dev/" target="_blank">
+    <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
+  </a>
+  <a href="https://www.typescriptlang.org/" target="_blank">
+    <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
+  </a>
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailTailwind CSS">
+  </a>
+  <a href="https://tanstack.com/query/latest" target="_blank">
+    <img src="https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" alt="TanStack Query">
+  </a>
+</p>
+
+<p align="center">
+  ¡Bienvenido al Explorador del Multiverso de Rick and Morty! Esta aplicación te permite navegar, buscar y descubrir todos los personajes de la famosa serie, con una experiencia visual y sonora inmersiva.
+</p>
 
 ## ✨ Características Principales
 
-- **Galería de Personajes**: Visualiza todos los personajes en una galería limpia y ordenada.
-- **Búsqueda Dinámica**: Encuentra personajes por nombre en tiempo real.
-- **Paginación Eficiente**: Navega fácilmente a través de cientos de personajes sin sobrecargar la aplicación.
-- **Vista de Detalle**: Haz clic en un personaje para obtener información completa, incluyendo su estado, especie, origen y episodios en los que aparece.
-- **Gestión de Favoritos**: Guarda tus personajes favoritos para acceder a ellos rápidamente en una sección dedicada. Los favoritos se guardan localmente en tu navegador.
-- **Diseño Adaptable (Responsive)**: Disfruta de una experiencia de usuario fluida tanto en dispositivos de escritorio como en móviles.
+-   **Galería de Personajes**: Visualiza todos los personajes en una galería limpia y ordenada.
+-   **Búsqueda Dinámica**: Encuentra personajes por nombre en tiempo real.
+-   **Paginación Eficiente**: Navega fácilmente a través de cientos de personajes.
+-   **Vista de Detalle de Personaje**: Haz clic en un personaje para obtener información completa, incluyendo su estado, especie, origen y episodios en los que aparece, con un fondo de video dinámico.
+-   **Gestión de Favoritos**: Guarda tus personajes favoritos para acceder a ellos rápidamente en una sección dedicada con un fondo de video personalizado. Los favoritos se guardan localmente en tu navegador.
+-   **Música de Fondo Ambiental**: Disfruta de una banda sonora inmersiva con controles de volumen y mute.
+-   **Elementos de Diseño Estéticos**: Logos de Rick and Morty y de HedrichDev estratégicamente colocados para mejorar la experiencia visual.
+-   **Diseño Adaptable (Responsive)**: Disfruta de una experiencia de usuario fluida tanto en dispositivos de escritorio como en móviles.
 
 ## 🚀 Tecnologías Utilizadas
 
-Este proyecto es un monorepo que utiliza una arquitectura cliente-servidor, aprovechando herramientas modernas para ofrecer una experiencia de desarrollo y de usuario de alta calidad.
+Este proyecto utiliza una arquitectura moderna y eficiente para ofrecer una experiencia de usuario de alta calidad.
 
 ### Frontend (`/client`)
 
-- **Framework**: [React](https://reactjs.org/)
-- **Bundler**: [Vite](https://vitejs.dev/)
-- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
-- **Gestión de Estado del Servidor**: [TanStack Query](https://tanstack.com/query) para un fetching de datos, cacheo y sincronización eficientes.
-- **Estilos**: [Tailwind CSS](https://tailwindcss.com/) para un diseño rápido y personalizable.
-- **Componentes UI**: Construido con [shadcn/ui](https://ui.shadcn.com/), una colección de componentes reutilizables y accesibles.
-- **Routing**: [React Router](https://reactrouter.com/) para la navegación entre páginas.
+-   **Framework**: [React](https://reactjs.org/) para construir la interfaz de usuario.
+-   **Bundler**: [Vite](https://vitejs.dev/) para un desarrollo rápido y un build optimizado.
+-   **Lenguaje**: [TypeScript](https://www.typescriptlang.org/) para un código más robusto y escalable.
+-   **Gestión de Estado del Servidor**: [TanStack Query](https://tanstack.com/query) para un fetching de datos, cacheo y sincronización eficientes.
+-   **Estilos**: [Tailwind CSS](https://tailwindcss.com/) para un diseño rápido y personalizable.
+-   **Componentes UI**: Construido con [shadcn/ui](https://ui.shadcn.com/), una colección de componentes reutilizables y accesibles.
+-   **Routing**: [Wouter](https://github.com/molefrog/wouter) para una navegación ligera y eficiente entre páginas.
+-   **Animaciones**: [Framer Motion](https://www.framer.com/motion/) para animaciones fluidas y declarativas.
 
 ### Backend (`/server`)
 
-- **Framework**: [Hono](https://hono.dev/) sobre [Node.js](https://nodejs.org/)
-- **Lenguaje**: [TypeScript](https://www.typescriptlang.org/)
-- **Función Principal**: Servir los archivos estáticos del frontend en un entorno de producción y gestionar rutas del lado del servidor.
+-   **Node.js**: Se utiliza un servidor Node.js/Express (via `server/index.ts`) principalmente para servir los archivos estáticos del frontend en producción y actuar como proxy para el servidor de desarrollo de Vite. Actualmente, no implementa rutas API complejas.
 
 ### Compartido (`/shared`)
 
-- **Validación de Esquemas**: [Zod](https://zod.dev/) para garantizar la consistencia de los tipos de datos entre el cliente y el servidor (si aplica).
+-   **Esquemas de Base de Datos**: Define la estructura de datos (ej. `users` y `posts` si se utilizaran) para la base de datos (Drizzle ORM).
+    **⚠️ Nota de Seguridad**: El campo `password` en `shared/schema.ts` está actualmente configurado para almacenar contraseñas en texto plano. Si se planea implementar autenticación de usuarios, es **CRÍTICO** modificar esto para usar hashing con salting (ej. bcrypt) antes de cualquier uso en producción para evitar graves vulnerabilidades de seguridad.
 
 ## 🛠️ Instalación y Uso
 
@@ -43,14 +67,14 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 ### Prerrequisitos
 
-- [Node.js](https://nodejs.org/) (versión 18.x o superior)
-- [npm](https://www.npmjs.com/) (generalmente incluido con Node.js)
+-   [Node.js](https://nodejs.org/) (versión 18.x o superior)
+-   [npm](https://www.npmjs.com/) (generalmente incluido con Node.js)
 
 ### Pasos
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone https://github.com/HedrichDev/RickMorty-API-Explorer
+    git clone https://github.com/HedrichDev/RickMortyAPIExplorer
     cd RickMortyAPIExplorer
     ```
 
@@ -61,7 +85,7 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
     ```
 
 3.  **Ejecuta el proyecto en modo de desarrollo:**
-    Esto iniciará el servidor de desarrollo de Vite para el frontend y el servidor de Hono para el backend. Podrás ver la aplicación en `http://localhost:5173`.
+    Esto iniciará el servidor de desarrollo de Vite para el frontend y el servidor de Node.js/Express para el backend. Podrás ver la aplicación en `http://localhost:5173`.
     ```bash
     npm run dev
     ```
@@ -70,43 +94,31 @@ Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
 
 -   `npm run dev`: Inicia los servidores de desarrollo para cliente y backend.
 -   `npm run build`: Compila el cliente de React/Vite para producción en la carpeta `/dist`.
--   `npm start`: Inicia el servidor de Node.js/Hono para servir el build de producción.
+-   `npm start`: Inicia el servidor de Node.js/Express para servir el build de producción.
+-   `npm run db:push`: Empuja los cambios del esquema de la base de datos (Drizzle ORM).
 
-## 📁 Estructura del Proyecto
+## ☁️ Despliegue en Netlify
 
-```
-RickMortyAPIExplorer/
-├── client/              # Código fuente del frontend (React + Vite)
-│   ├── src/
-│   │   ├── components/  # Componentes reutilizables de la UI
-│   │   ├── hooks/       # Hooks personalizados de React
-│   │   ├── lib/         # Lógica de API, utils, etc.
-│   │   ├── pages/       # Vistas principales de la aplicación
-│   │   └── App.tsx      # Componente raíz y enrutador
-│   └── index.html       # Punto de entrada HTML
-├── server/              # Código fuente del backend (Hono)
-│   └── index.ts         # Punto de entrada del servidor
-├── shared/              # Código compartido (ej. esquemas Zod)
-│   └── schema.ts
-├── package.json         # Dependencias y scripts del proyecto
-└── README.md            # Este archivo
-```
+Este proyecto está configurado para un despliegue sencillo en Netlify. Se incluye un archivo `netlify.toml` que define los siguientes ajustes:
 
-## ⚖️ Licencia
+-   **Build Command**: `npm run build`
+-   **Publish Directory**: `dist`
+-   **Fallback para SPA**: Configurado para manejar rutas de cliente (redirecciona `/*` a `/index.html`).
+
+Para desplegar:
+1.  Conecta tu repositorio a Netlify.
+2.  Netlify detectará automáticamente el archivo `netlify.toml` y aplicará la configuración.
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Si encuentras un error o tienes una mejora, por favor abre un 'issue' o envía un 'pull request'.
+
+## 📝 Licencia
 
 Este proyecto está bajo la Licencia MIT.
 
 ---
 
-<div align="center" style="transition: transform 0.2s; display: inline-block;">
-  <img height="250" src="https://cdn.discordapp.com/attachments/1416487311587147787/1446304736465915934/Copilot_20251113_134613.png?ex=69337fc0&is=69322e40&hm=28f9e323b3f6c5456ddca218a2026fee2e1ab5c9c63f27fb803f0ad6df4425bc" 
-       style="border-radius: 15px; transition: transform 0.2s;" 
-       onmouseover="this.style.transform='scale(1.1)'" 
-       onmouseout="this.style.transform='scale(1)'"/>
-
-</div>
-<div align="center">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=glocf.glocf&"  />
-</div>
-
-<h4 align="center"> Copyright (c) 2025 HΞDЯICHDΞV </h4>
+<p align="center">
+  Hecho con ❤️ por <a href="https://github.com/HedrichDev" target="_blank" rel="noopener noreferrer">HΞDЯICHDΞV</a>
+</p>
