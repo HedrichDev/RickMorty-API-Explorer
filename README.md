@@ -78,12 +78,6 @@ Este proyecto utiliza una arquitectura moderna y eficiente para ofrecer una expe
     *   Servir los **archivos estáticos** del frontend en un entorno de producción (si se optara por un despliegue full-stack que lo requiriera).
     **Nota Importante**: Para la funcionalidad principal de este "Rick and Morty API Explorer" (obtener datos de la API de Rick and Morty), **no se requiere un backend** activo, ya que la aplicación funciona enteramente en el lado del cliente y consume la API directamente.
 
-### Compartido (`/shared`)
-
--   **Esquemas de Base de Datos**: Este directorio define la estructura de datos (ej. `users` y `posts` si se utilizaran) para la base de datos (Drizzle ORM). Contiene `shared/schema.ts` y `drizzle.config.ts`.
-    **⚠️ Nota Importante**: Dado que esta aplicación es puramente del lado del cliente y obtiene datos directamente de la API de Rick and Morty, **los esquemas de base de datos en `/shared` (incluyendo la tabla `users` y el campo `password`) son irrelevantes y no se utilizan** para la funcionalidad actual de la aplicación.
-    **Recomendación de Seguridad**: Si no tienes planes de implementar un backend con autenticación de usuarios y una base de datos persistente, se recomienda **eliminar el directorio `/shared` y `drizzle.config.ts`**, así como cualquier script relacionado en `package.json` (`npm run db:push`). Esto simplificará el proyecto y eliminará cualquier confusión sobre la seguridad de las contraseñas.
-
 ## 🛠️ Instalación y Uso
 
 Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local.
