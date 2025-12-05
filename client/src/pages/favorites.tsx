@@ -9,10 +9,10 @@ export default function Favorites() {
     <div className="space-y-8">
       <div className="text-center space-y-4 mb-12">
         <h2 className="text-4xl md:text-6xl font-display font-bold bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent">
-          Your Squad
+          Tu escuadrón
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          The chosen ones across dimensions.
+          Los elegidos a través de las dimensiones.
         </p>
       </div>
 

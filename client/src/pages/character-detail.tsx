@@ -41,7 +41,7 @@ export default function CharacterDetail() {
     );
   }
 
-  if (!character) return <div>Character not found</div>;
+  if (!character) return <div>Personaje no encontrado</div>;
 
   const isFav = isFavorite(character.id);
 
@@ -50,7 +50,7 @@ export default function CharacterDetail() {
       <Link href="/">
         <Button variant="ghost" className="mb-6 gap-2 pl-0 hover:bg-transparent hover:text-primary">
           <ArrowLeft className="w-4 h-4" />
-          Back to Multiverse
+          De vuelta al multiverso
         </Button>
       </Link>
 

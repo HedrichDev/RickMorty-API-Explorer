@@ -31,7 +31,7 @@ export default function Home() {
           The Multiverse
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Browse the database of all known sentient beings across the central finite curve.
+          Explore la base de datos de todos los seres sensibles conocidos a lo largo de la curva finita central.
         </p>
       </div>
 
@@ -49,14 +49,14 @@ export default function Home() {
         </div>
       ) : isError ? (
         <div className="text-center py-20">
-          <h3 className="text-2xl font-bold text-destructive mb-2">Error loading data</h3>
-          <p className="text-muted-foreground">Could not fetch characters from the Citadel servers.</p>
+          <h3 className="text-2xl font-bold text-destructive mb-2">Error al cargar datos</h3>
+          <p className="text-muted-foreground">No se pudieron obtener personajes de los servidores de Ciudadela.</p>
         </div>
       ) : (
         <>
           {data?.results.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">No characters found in this dimension.</p>
+              <p className="text-xl text-muted-foreground">No se encontraron caracteres en esta dimensión.</p>
             </div>
           ) : (
             <motion.div 
