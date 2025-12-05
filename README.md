@@ -1,6 +1,6 @@
 
 # 『HZ』┊ Rick and Morty API
-![](https://github.com/HedrichDev/RickMorty-API-Explorer/blob/main/client/public/opengraph.jpg?raw=true)
+![]()
 
 ¡Bienvenido al Explorador del Universo de Rick and Morty! Esta aplicación web te permite navegar, buscar y descubrir todos los personajes de la famosa serie, utilizando la [API pública de Rick and Morty](https://rickandmortyapi.com/).
 
