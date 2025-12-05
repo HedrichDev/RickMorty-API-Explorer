@@ -143,12 +143,3 @@ Este proyecto está bajo la Licencia MIT.
     <img src="./client/public/HedrichDev.png" alt="HedrichDev Logo" width="50"/>
   </a>
 </p>
-
-## Video de Introducción
-
-<p align="center">
-  <video controls loop muted autoplay width="600">
-    <source src="./client/public/Intro.mp4" type="video/mp4">
-    Tu navegador no soporta el tag de video.
-  </video>
-</p>
