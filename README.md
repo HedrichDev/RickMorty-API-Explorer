@@ -73,12 +73,16 @@ Este proyecto utiliza una arquitectura moderna y eficiente para ofrecer una expe
 
 ### Backend (`/server`)
 
--   **Node.js**: <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js"> Se utiliza un servidor Node.js/Express (via `server/index.ts`) principalmente para servir los archivos estáticos del frontend en producción y actuar como proxy para el servidor de desarrollo de Vite. Actualmente, no implementa rutas API complejas.
+-   **Node.js**: <img src="https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white" alt="Node.js"> El directorio `/server` contiene una configuración de servidor Node.js/Express (via `server/index.ts`). Este servidor se utiliza principalmente para:
+    *   Actuar como **proxy de desarrollo** para el servidor de Vite en entorno local, facilitando la integración.
+    *   Servir los **archivos estáticos** del frontend en un entorno de producción (si se optara por un despliegue full-stack que lo requiriera).
+    **Nota Importante**: Para la funcionalidad principal de este "Rick and Morty API Explorer" (obtener datos de la API de Rick and Morty), **no se requiere un backend** activo, ya que la aplicación funciona enteramente en el lado del cliente y consume la API directamente.
 
 ### Compartido (`/shared`)
 
--   **Esquemas de Base de Datos**: Define la estructura de datos (ej. `users` y `posts` si se utilizaran) para la base de datos (Drizzle ORM).
-    **⚠️ Nota de Seguridad**: El campo `password` en `shared/schema.ts` está actualmente configurado para almacenar contraseñas en texto plano. Si se planea implementar autenticación de usuarios, es **CRÍTICO** modificar esto para usar hashing con salting (ej. bcrypt) antes de cualquier uso en producción para evitar graves vulnerabilidades de seguridad.
+-   **Esquemas de Base de Datos**: Este directorio define la estructura de datos (ej. `users` y `posts` si se utilizaran) para la base de datos (Drizzle ORM). Contiene `shared/schema.ts` y `drizzle.config.ts`.
+    **⚠️ Nota Importante**: Dado que esta aplicación es puramente del lado del cliente y obtiene datos directamente de la API de Rick and Morty, **los esquemas de base de datos en `/shared` (incluyendo la tabla `users` y el campo `password`) son irrelevantes y no se utilizan** para la funcionalidad actual de la aplicación.
+    **Recomendación de Seguridad**: Si no tienes planes de implementar un backend con autenticación de usuarios y una base de datos persistente, se recomienda **eliminar el directorio `/shared` y `drizzle.config.ts`**, así como cualquier script relacionado en `package.json` (`npm run db:push`). Esto simplificará el proyecto y eliminará cualquier confusión sobre la seguridad de las contraseñas.
 
 ## 🛠️ Instalación y Uso
 
