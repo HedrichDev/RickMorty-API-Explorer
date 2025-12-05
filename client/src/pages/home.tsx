@@ -32,9 +32,9 @@ export default function Home() {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover filter blur-sm"
+          className="w-full h-full object-cover filter blur-sm opacity-10" // opacity-10 for 0.1 opacity
         >
-          <source src="https://www.dailymotion.com/embed/video/x4zb6jb" type="video/mp4" />
+          <source src="/Intro.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
