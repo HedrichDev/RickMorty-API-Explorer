@@ -48,9 +48,6 @@
 <p align="center">
   <img src="./client/public/person.png" alt="Character Detail Page Screenshot" width="400"/>
 </p>
-<p align="center">
-  <img src="./client/public/opengraph.jpg" alt="Rick and Morty API Explorer Screenshot" width="400"/>
-</p>
 
 ## 🚀 Tecnologías Utilizadas
 
